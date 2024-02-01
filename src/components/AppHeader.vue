@@ -1,23 +1,24 @@
 <script>
 export default {
     name: 'AppHeader',
-    /*
-        data() {
-            return {
-                menuBar: [
-                    'CHARACTERS',
-                    'COMICS',
-                    'MOVIES',
-                    'TV',
-                    'GAMES',
-                    'COLLECTIBLES',
-                    'VIDEOS',
-                    'FANS',
-                    'NEWS',
-                    'SHOP'
-                ]
-            }
-        }*/
+
+    data() {
+        return {
+            logo: '/img/dc-logo.png',
+            menuBar: [
+                'CHARACTERS',
+                'COMICS',
+                'MOVIES',
+                'TV',
+                'GAMES',
+                'COLLECTIBLES',
+                'VIDEOS',
+                'FANS',
+                'NEWS',
+                'SHOP'
+            ]
+        }
+    }
 }
 </script>
 
@@ -25,21 +26,14 @@ export default {
     <header>
         <div class="container d-flex">
             <div class="logoHeader">
-                <img src="/img/dc-logo.png" alt="">
+                <img :src="logo" alt="">
             </div>
 
             <nav>
                 <ul class="mainMenu d-flex">
-                    <li><a href=""></a></li>
-                    <li><a href="">COMICS</a></li>
-                    <li><a href="">MOVIES</a></li>
-                    <li><a href="">TV</a></li>
-                    <li><a href="">GAMES</a></li>
-                    <li><a href="">COLLECTIBLES</a></li>
-                    <li><a href="">VIDEOS</a></li>
-                    <li><a href="">FANS</a></li>
-                    <li><a href="">NEWS</a></li>
-                    <li><a href="">SHOP</a></li>
+                    <li v-for="item in menuBar">
+                        <a href="">{{ item }}</a>
+                    </li>
                 </ul>
             </nav>
         </div>
