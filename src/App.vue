@@ -1,37 +1,26 @@
 <script >
+import AppHeader from './components/AppHeader.vue';
+
+import AppMain from './components/AppMain.vue';
+
 export default {
   name: 'App',
+  components: {
+    AppHeader,
+    AppMain,
+  }
 }
 </script>
 
 <template>
-  <header>
-    <div class="container">
-      <div>
-        <img src="/img/dc-logo.png" alt="">
-      </div>
+  <AppHeader></AppHeader>
 
-      <nav>
-        <ul>
-          <li><a href="">CHARACTERS</a></li>
-          <li><a href="">COMICS</a></li>
-          <li><a href="">MOVIES</a></li>
-          <li><a href="">TV</a></li>
-          <li><a href="">GAMES</a></li>
-          <li><a href="">COLLECTIBLES</a></li>
-          <li><a href="">VIDEOS</a></li>
-          <li><a href="">FANS</a></li>
-          <li><a href="">NEWS</a></li>
-          <li><a href="">SHOP</a></li>
-        </ul>
-      </nav>
+  <AppMain></AppMain>
 
-    </div>
-  </header>
+  <footer>
 
-  <main></main>
 
-  <footer></footer>
+  </footer>
 </template>
 
 <style></style>

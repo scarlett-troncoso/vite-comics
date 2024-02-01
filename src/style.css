@@ -11,14 +11,18 @@ body {
 :root {
   --primary-dark: #1c1c1c;
   --secondary-blue: #0282f9;
-  --light: #ffffff;
+  --light-header: #ffffff;
   --gray-main: #797979;
   --gray-footer: #303030;
   --blue-follow: #0581f2;
 }
 
 .container {
-  width: 75%;
+  width: 70%;
   max-width: 1176px;
   margin: auto;
+}
+
+.d-flex {
+  display: flex;
 }
