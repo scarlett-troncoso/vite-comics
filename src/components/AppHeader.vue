@@ -1,6 +1,23 @@
 <script>
 export default {
     name: 'AppHeader',
+    /*
+        data() {
+            return {
+                menuBar: [
+                    'CHARACTERS',
+                    'COMICS',
+                    'MOVIES',
+                    'TV',
+                    'GAMES',
+                    'COLLECTIBLES',
+                    'VIDEOS',
+                    'FANS',
+                    'NEWS',
+                    'SHOP'
+                ]
+            }
+        }*/
 }
 </script>
 
@@ -13,7 +30,7 @@ export default {
 
             <nav>
                 <ul class="mainMenu d-flex">
-                    <li><a href="">CHARACTERS</a></li>
+                    <li><a href=""></a></li>
                     <li><a href="">COMICS</a></li>
                     <li><a href="">MOVIES</a></li>
                     <li><a href="">TV</a></li>
@@ -62,3 +79,4 @@ header {
     }
 }
 </style>
+
