@@ -76,6 +76,7 @@ main {
             & li {
                 padding: 1rem;
 
+
                 & .cont-img {
                     width: 2.75rem;
                     height: 2.75rem;

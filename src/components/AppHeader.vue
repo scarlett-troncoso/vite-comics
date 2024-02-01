@@ -53,7 +53,7 @@ header {
         font-weight: 700;
 
         & li {
-            padding: 0.75rem;
+            padding: 0.75rem 0 0.75rem 1.5rem;
         }
 
         & a {
