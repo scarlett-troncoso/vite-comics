@@ -6,53 +6,50 @@ export default {
 
 <template>
     <main>
-        <div>
-            <div class="content-here container">
-                <h3><a href="#"> - - > Content goes here < - - </a>
-                </h3>
-            </div>
-
-            <section class="products">
-                <ul class="container d-flex">
-
-                    <li class="d-flex">
-                        <div class="cont-img">
-                            <img src="/img/buy-comics-digital-comics.png" alt="">
-                        </div>
-                        <a href="#">DIGITAL COMICS</a>
-                    </li>
-
-                    <li class="d-flex">
-                        <div class="cont-img">
-                            <img src="/img/buy-comics-merchandise.png" alt="">
-                        </div>
-                        <a href="#">DC MERCHANDISE</a>
-                    </li>
-
-                    <li class="d-flex">
-                        <div class="cont-img">
-                            <img src="/img/buy-comics-subscriptions.png" alt="">
-                        </div>
-                        <a href="#">SUBSCRIPTION</a>
-                    </li>
-
-                    <li class="d-flex">
-                        <div class="cont-img">
-                            <img src="/img/buy-comics-shop-locator.png" alt="">
-                        </div>
-                        <a href="#">COMIC SHOP LOCATOR</a>
-                    </li>
-
-                    <li class="d-flex">
-                        <div class="cont-img visa">
-                            <img src="/img/buy-dc-power-visa.svg" alt="">
-                        </div>
-                        <a href="#">DC POWER VISA</a>
-                    </li>
-
-                </ul>
-            </section>
+        <div class="content-here container">
+            <h3><a href="#"> - - > Content goes here < - - </a>
+            </h3>
         </div>
+
+        <section class="products">
+            <ul class="container d-flex">
+
+                <li class="d-flex">
+                    <div class="cont-img">
+                        <img src="/img/buy-comics-digital-comics.png" alt="">
+                    </div>
+                    <a href="#">DIGITAL COMICS</a>
+                </li>
+
+                <li class="d-flex">
+                    <div class="cont-img">
+                        <img src="/img/buy-comics-merchandise.png" alt="">
+                    </div>
+                    <a href="#">DC MERCHANDISE</a>
+                </li>
+
+                <li class="d-flex">
+                    <div class="cont-img">
+                        <img src="/img/buy-comics-subscriptions.png" alt="">
+                    </div>
+                    <a href="#">SUBSCRIPTION</a>
+                </li>
+
+                <li class="d-flex">
+                    <div class="cont-img">
+                        <img src="/img/buy-comics-shop-locator.png" alt="">
+                    </div>
+                    <a href="#">COMIC SHOP LOCATOR</a>
+                </li>
+
+                <li class="d-flex">
+                    <div class="cont-img visa">
+                        <img src="/img/buy-dc-power-visa.svg" alt="">
+                    </div>
+                    <a href="#">DC POWER VISA</a>
+                </li>
+            </ul>
+        </section>
     </main>
 </template>
 
