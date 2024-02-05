@@ -80,6 +80,25 @@ export default {
                     series: "Catwoman",
                     type: "graphic novel",
                 },
+            ],
+
+            Products: [
+                {
+                    img: "/img/buy-comics-digital-comics.png",
+                    text: "DIGITAL COMICS"
+                },
+                {
+                    img: "/img/buy-comics-merchandise.png",
+                    text: "DC MERCHANDISE"
+                },
+                {
+                    img: "/img/buy-comics-subscriptions.png",
+                    text: "SUBSCRIPTION"
+                },
+                {
+                    img: "/img/buy-comics-shop-locator.png",
+                    text: "COMIC SHOP LOCATOR"
+                }
             ]
         }
     }
@@ -88,8 +107,8 @@ export default {
 
 <template>
     <main>
-        <div class="content-here container">
-            <h3>CURRENT SERIES</h3>
+        <div class="container">
+            <h4 class="titleCurrent">CURRENT SERIES</h4>
             <div class="row">
                 <div class="col-2" v-for="comic in comics">
                     <ComicsCards :comic="comic"></ComicsCards>
@@ -101,32 +120,11 @@ export default {
         <section class="products">
             <ul class="container d-flex">
 
-                <li class="d-flex">
+                <li class="d-flex" v-for="product in Products">
                     <div class="cont-img">
-                        <img src="/img/buy-comics-digital-comics.png" alt="">
+                        <img :src=product.img alt="#">
                     </div>
-                    <a href="#">DIGITAL COMICS</a>
-                </li>
-
-                <li class="d-flex">
-                    <div class="cont-img">
-                        <img src="/img/buy-comics-merchandise.png" alt="">
-                    </div>
-                    <a href="#">DC MERCHANDISE</a>
-                </li>
-
-                <li class="d-flex">
-                    <div class="cont-img">
-                        <img src="/img/buy-comics-subscriptions.png" alt="">
-                    </div>
-                    <a href="#">SUBSCRIPTION</a>
-                </li>
-
-                <li class="d-flex">
-                    <div class="cont-img">
-                        <img src="/img/buy-comics-shop-locator.png" alt="">
-                    </div>
-                    <a href="#">COMIC SHOP LOCATOR</a>
+                    <a href="#">{{ product.text }}</a>
                 </li>
 
                 <li class="d-flex">
@@ -142,6 +140,17 @@ export default {
 
 <style scoped>
 main {
+    background-color: var(--primary-dark);
+
+    & .titleCurrent {
+        margin: 1rem;
+        color: var(--light-header);
+        background-color: var(--secondary-blue);
+        width: 170px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center
+    }
 
     & .row {
         display: flex;
@@ -152,16 +161,9 @@ main {
         }
     }
 
-
-    background-color: var(--primary-dark);
-
-    a {
+    & a {
         color: var(--light-header);
         text-decoration: none;
-    }
-
-    .content-here {
-        padding: 2.5rem;
     }
 
     & .products {
@@ -173,7 +175,6 @@ main {
 
             & li {
                 padding: 1rem;
-
 
                 & .cont-img {
                     width: 2.75rem;

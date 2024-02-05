@@ -12,8 +12,11 @@ export default {
         <div class="cont-img">
             <img :src="comic.thumb" alt="">
         </div>
-        <h5>{{ comic.series }}</h5>
-        <span>{{ comic.price }}</span>
+        <div class="titlePrice">
+            <p>{{ comic.series }}</p>
+            <p>{{ comic.price }}</p>
+        </div>
+
     </div>
 </template>
 
@@ -21,9 +24,21 @@ export default {
 
 <style scoped>
 .card {
+    color: var(--light-header);
+
+    & .titlePrice {
+        font-size: small;
+        font-weight: 100;
+        line-height: 1rem;
+        padding-top: 0.25rem;
+        padding-bottom: 2rem;
+    }
+
 
     & .cont-img {
         width: 150px;
+        height: 150px;
+        overflow: hidden;
 
         & img {
             max-width: 100%;

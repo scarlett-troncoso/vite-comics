@@ -52,7 +52,7 @@ export default {
             </nav>
 
             <div class="cont-img">
-                <!--<img src="/img/dc-logo-bg.png" alt="">-->
+                <img src="/img/dc-logo-bg.png" alt="">
             </div>
 
         </section>
@@ -127,13 +127,15 @@ footer {
         }
 
         & .cont-img {
-            background-image: url(/img/dc-logo-bg.png);
-            background-size: 440px;
-            background-repeat: no-repeat;
+            overflow-y: hidden;
             width: 440px;
-            height: 440px;
-            margin: -4.5rem -4.5rem;
-            margin-right: revert-layer;
+            height: 300px;
+
+            & img {
+                max-width: 100%;
+                margin: -4.5rem 0 -4.5rem;
+                margin-right: revert-layer;
+            }
         }
     }
 
