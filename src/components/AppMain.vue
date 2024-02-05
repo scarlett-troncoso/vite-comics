@@ -1,8 +1,10 @@
 <script>
+import AppJumbotron from './AppJumbotron.vue';
 import ComicsCards from './ComicsCards.vue';
 export default {
     name: 'AppMain',
     components: {
+        AppJumbotron,
         ComicsCards
     },
     data() {
@@ -107,14 +109,20 @@ export default {
 
 <template>
     <main>
+        <AppJumbotron></AppJumbotron>
         <div class="container">
             <h4 class="titleCurrent">CURRENT SERIES</h4>
+
             <div class="row">
-                <div class="col-2" v-for="comic in comics">
+                <div class="col-12 col-md-4 col-lg-2" v-for="comic in comics">
                     <ComicsCards :comic="comic"></ComicsCards>
                 </div>
             </div>
-            <button>Load More</button>
+
+            <div class="loadMore">
+                <button>Load More</button>
+            </div>
+
         </div>
 
         <section class="products">
@@ -143,7 +151,7 @@ main {
     background-color: var(--primary-dark);
 
     & .titleCurrent {
-        margin: 1rem;
+        margin-top: -1rem;
         color: var(--light-header);
         background-color: var(--secondary-blue);
         width: 170px;
@@ -155,16 +163,20 @@ main {
     & .row {
         display: flex;
         flex-wrap: wrap;
+    }
 
-        & .col-2 {
-            width: calc(100% / 12 * 2);
+    & .loadMore {
+        text-align: center;
+        margin: 2rem 0 1rem;
+
+        & button {
+            background-color: var(--secondary-blue);
+            color: var(--light-header);
+            padding: 0.5rem 2rem;
+            border-style: none;
         }
     }
 
-    & a {
-        color: var(--light-header);
-        text-decoration: none;
-    }
 
     & .products {
         background-color: var(--secondary-blue);
@@ -194,6 +206,8 @@ main {
                     font-weight: 400;
                     font-size: 0.70rem;
                     padding: 0.75rem;
+                    color: var(--light-header);
+                    text-decoration: none;
                 }
             }
         }

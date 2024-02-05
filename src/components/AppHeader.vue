@@ -29,7 +29,7 @@ export default {
                 <img :src="logo" alt="">
             </div>
 
-            <nav>
+            <nav class="d-flex">
                 <ul class="mainMenu d-flex">
                     <li v-for="item in menuBar">
                         <a href="">{{ item }}</a>
@@ -59,17 +59,25 @@ header {
     }
 
     & .mainMenu {
+        gap: 1rem;
         list-style: none;
         font-size: 0.65rem;
         font-weight: 700;
 
-        & li {
-            padding: 0.75rem 0 0.75rem 1.5rem;
+        &>li {
+            padding: 0.75rem 0 0.75rem 0;
+            border-bottom: 4px solid transparent;
+
+            & a {
+                text-decoration: none;
+            }
         }
 
-        & a {
-            text-decoration: none;
+        &>li:hover {
+            border-bottom: 4px solid var(--secondary-blue);
         }
+
+
     }
 }
 </style>
