@@ -99,6 +99,12 @@ footer {
     background-size: 100%;
     height: 300px;
 
+    /* ------*****Per mettere il logo cosi tagliato poteva essere anche cosi:*******-------
+    background-image: url(/img/footer-bg.jpg), url(/img/dc-logo-bg.png); ---- tutti due url delle immagini
+    background-repeat: no-repeat;
+    background-size: 500px, cover;
+    background-postition: 80%, top; -----****tutto questo a un div de sfondo, di cui dentro ce il container di tutto il contenudo*****---  */
+
     & ul {
         list-style: none;
         padding: 1rem;

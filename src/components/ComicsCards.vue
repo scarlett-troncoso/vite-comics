@@ -10,7 +10,7 @@ export default {
 <template>
     <div class="card">
         <div class="cont-img">
-            <img :src="comic.thumb" alt="">
+            <img :src="comic.thumb" alt="series + 'image'">
         </div>
         <p>{{ comic.series }}</p>
         <p>{{ comic.price }}</p>
